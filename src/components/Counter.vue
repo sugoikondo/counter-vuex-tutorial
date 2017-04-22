@@ -1,6 +1,13 @@
 <template>
-<div>
-  <button @click="increment">{{$store.state.counterValue}}</button>
+<div class="">
+  <div>
+    {{$store.state.counterValue}}
+  </div>
+  <div>
+    <button @click="increment">+</button>
+    <button type="button" @click="decrement">-</button>
+    <button type="button" @click="clear">clear</button>
+  </div>
 </div>
 </template>
 

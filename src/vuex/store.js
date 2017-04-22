@@ -13,6 +13,16 @@ const actions = {
   }) => {
     commit('increment');
   },
+  decrement: ({
+    commit
+  }) => {
+    commit('decrement')
+  },
+  clear: ({
+    commit
+  }) => {
+    commit('clear')
+  },
 };
 
 const getters = {
