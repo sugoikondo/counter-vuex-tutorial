@@ -8,16 +8,15 @@ const state = {
 };
 
 const actions = {
-  increment({
+  increment: ({
     commit
-  }) {
+  }) => {
     commit('increment');
   },
 };
 
 const getters = {
   countNum: state => state.counterValue
-
 };
 
 const mutations = {

@@ -1,27 +1,23 @@
 <template>
 <div>
-  <button type="button" @click="increment()">{{countNum}}</button>
+  <button @click="increment">{{$store.state.counterValue}}</button>
 </div>
 </template>
 
 <script>
 import {
   mapActions,
-  mapGetters
+  mapGetters,
 } from 'vuex';
 
 export default {
-  methods: {
-    ...mapActions([
-      'increment', 'decrement', 'clear',
-    ]),
+  computed: {
     ...mapGetters([
       'countNum'
     ])
   },
+  methods: mapActions([
+    'increment', 'decrement', 'clear',
+  ]),
 }
 </script>
-
-<style>
-
-</style>
